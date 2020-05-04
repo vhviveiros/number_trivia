@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d6dcdb2a-a3cd-4fc1-b417-16d3bef88afd" name="Default Changelist" comment="">
+    <list default="true" id="ec402e55-3963-430d-8134-189a8b120d45" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_for_Android.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_for_Android.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_for_Android.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/main_dart.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/number_trivia_android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android/number_trivia_android.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/equatable.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/extensions/equatable.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/error/failures.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/error/failures.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/usecases/usecase.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/usecases/usecase.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/number_trivia/domain/entities/number_trivia.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/number_trivia/domain/entities/number_trivia.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/number_trivia/domain/usecases/get_concrete_number_trivia.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/number_trivia/domain/usecases/get_concrete_number_trivia.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/number_trivia/data/models/number_trivia_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/number_trivia/data/models/number_trivia_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/number_trivia/data/repositories/number_trivia_repository_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/number_trivia/data/repositories/number_trivia_repository_impl.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/data/repositories/number_trivia_repository_impl_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/data/repositories/number_trivia_repository_impl_test.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,17 +23,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1bHirgo479xfeJnMQiejdknKKGi" />
+  <component name="ProjectId" id="1bSgwZmhqVNah8yyEWQbvdLgMcy" />
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Dart" />
     <property name="show.migrate.to.gradle.popup" value="false" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\vhviv\Documents\GitHub\number_trivia\lib\core\extensions" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -46,16 +41,40 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Flutter Test.should return failure when the call to remote data source is unsuccessful">
+    <configuration name="device is online" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="device is online" />
+      <option name="testFile" value="$PROJECT_DIR$/test/data/repositories/number_trivia_repository_impl_test.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="getConcreteNumberTrivia" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="getConcreteNumberTrivia" />
+      <option name="testFile" value="$PROJECT_DIR$/test/data/repositories/number_trivia_repository_impl_test.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="should return failure when the call to remote data source is unsuccessful" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="should return failure when the call to remote data source is unsuccessful" />
+      <option name="testFile" value="$PROJECT_DIR$/test/data/repositories/number_trivia_repository_impl_test.dart" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Flutter Test.should return failure when the call to remote data source is unsuccessful" />
+        <item itemvalue="Flutter Test.getConcreteNumberTrivia" />
+        <item itemvalue="Flutter Test.device is online" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d6dcdb2a-a3cd-4fc1-b417-16d3bef88afd" name="Default Changelist" comment="" />
-      <created>1588295619741</created>
+      <changelist id="ec402e55-3963-430d-8134-189a8b120d45" name="Default Changelist" comment="" />
+      <created>1588631148974</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1588295619741</updated>
+      <updated>1588631148974</updated>
     </task>
     <servers />
   </component>
