@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec402e55-3963-430d-8134-189a8b120d45" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/core/network/network_info_test.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/data/datasources/number_trivia_local_datasource_test.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/data/datasources/number_trivia_remote_datasource_test.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/trivia_cached.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/platform/network_info.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/network/network_info.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/number_trivia/data/models/number_trivia_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/number_trivia/data/models/number_trivia_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/number_trivia/data/repositories/number_trivia_repository_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/number_trivia/data/repositories/number_trivia_repository_impl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/data/repositories/number_trivia_repository_impl_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/data/repositories/number_trivia_repository_impl_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/number_trivia/data/datasources/number_trivia_local_data_source.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/number_trivia/data/datasources/number_trivia_local_data_source.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/number_trivia/data/datasources/number_trivia_remote_data_source.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/number_trivia/data/datasources/number_trivia_remote_data_source.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/trivia.json" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/trivia.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,25 +53,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Flutter Test.is connected">
-    <configuration name="getConcreteNumberTrivia" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="getConcreteNumberTrivia" />
-      <option name="testFile" value="$PROJECT_DIR$/test/data/repositories/number_trivia_repository_impl_test.dart" />
+  <component name="RunManager" selected="Flutter Test.get concrete number trivia">
+    <configuration name="get concrete number trivia" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="get concrete number trivia" />
+      <option name="testFile" value="$PROJECT_DIR$/test/data/datasources/number_trivia_remote_datasource_test.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="getRandomNumberTrivia" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="getRandomNumberTrivia" />
-      <option name="testFile" value="$PROJECT_DIR$/test/data/repositories/number_trivia_repository_impl_test.dart" />
+    <configuration name="getLastNumberTrivia" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="getLastNumberTrivia" />
+      <option name="testFile" value="$PROJECT_DIR$/test/data/datasources/number_trivia_local_datasource_test.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="is connected" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="is connected" />
-      <option name="testFile" value="$PROJECT_DIR$/test/core/network/network_info_test.dart" />
+    <configuration name="tests in get_concrete_number_trivia_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testFile" value="$PROJECT_DIR$/test/domain/usecases/get_concrete_number_trivia_test.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="should return cache failure when unsuccessfully get last cache" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="should return cache failure when unsuccessfully get last cache" />
-      <option name="testFile" value="$PROJECT_DIR$/test/data/repositories/number_trivia_repository_impl_test.dart" />
+    <configuration name="tests in get_random_number_trivia_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testFile" value="$PROJECT_DIR$/test/domain/usecases/get_random_number_trivia_test.dart" />
       <method v="2" />
     </configuration>
     <configuration name="tests in number_trivia_repository_impl_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
@@ -80,11 +78,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Flutter Test.is connected" />
+        <item itemvalue="Flutter Test.get concrete number trivia" />
+        <item itemvalue="Flutter Test.getLastNumberTrivia" />
+        <item itemvalue="Flutter Test.tests in get_random_number_trivia_test.dart" />
+        <item itemvalue="Flutter Test.tests in get_concrete_number_trivia_test.dart" />
         <item itemvalue="Flutter Test.tests in number_trivia_repository_impl_test.dart" />
-        <item itemvalue="Flutter Test.getRandomNumberTrivia" />
-        <item itemvalue="Flutter Test.getConcreteNumberTrivia" />
-        <item itemvalue="Flutter Test.should return cache failure when unsuccessfully get last cache" />
       </list>
     </recent_temporary>
   </component>
@@ -106,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588634278353</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Next: ep 8">
+      <created>1588723719237</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588723719237</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,6 +129,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Next step: device is offline" />
-    <option name="LAST_COMMIT_MESSAGE" value="Next step: device is offline" />
+    <MESSAGE value="Next: ep 8" />
+    <option name="LAST_COMMIT_MESSAGE" value="Next: ep 8" />
   </component>
 </project>
