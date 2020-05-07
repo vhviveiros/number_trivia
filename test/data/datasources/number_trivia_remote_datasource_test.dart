@@ -63,4 +63,47 @@ main() {
       expect(() => call(tNumber), throwsA(isInstanceOf<ServerException>()));
     });
   });
+
+  group('get random number trivia', () {
+    final jsonString = fixture('trivia.json');
+    final tNumberTriviaModel = NumberTriviaModel.fromJson(json.decode(jsonString));
+    void setupMockHttpClientResponse200() {
+      when(mockHttpClient.get(any, headers: anyNamed('headers')))
+          .thenAnswer((_) async => Response(jsonString, 200));
+    }
+    void setupMockHttpClientResponse404() {
+      when(mockHttpClient.get(any, headers: anyNamed('headers')))
+          .thenAnswer((_) async => Response('Something went wrong', 404));
+    }
+
+    test("should perform a GET on a URL with a number being the endpoint with json header", () async {
+      //arrange
+      setupMockHttpClientResponse200();
+      //act
+      dataSource.getRandomNumberTrivia();
+      //assert
+      verify(mockHttpClient.get(
+        'http://numbersapi.com/random',
+        headers: {'Content-Type': 'application/json'},
+      ));
+    });
+
+    test("should return numberTrivia when response code is 200 (success)", () async {
+      //arrange
+      setupMockHttpClientResponse200();
+      //act
+      final result = await dataSource.getRandomNumberTrivia();
+      //assert
+      expect(result, equals(tNumberTriviaModel));
+    });
+
+    test("should throw a ServerException when the response is different of 200", () async {
+      //arrange
+      setupMockHttpClientResponse404();
+      //act
+      final call = dataSource.getRandomNumberTrivia;
+      //assert
+      expect(() => call(), throwsA(isInstanceOf<ServerException>()));
+    });
+  });
 }
