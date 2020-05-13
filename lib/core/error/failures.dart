@@ -1,4 +1,4 @@
-import '../extensions/equatable.dart';
+import '../utils/equatable.dart';
 
 abstract class Failure extends Equatable {
   Failure([List properties = const <dynamic>[]]) : super(properties);

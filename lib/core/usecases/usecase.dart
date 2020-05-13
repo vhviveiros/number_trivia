@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 
-import '../extensions/equatable.dart';
+import '../utils/equatable.dart';
 import '../error/failures.dart';
 
 abstract class UseCase<Type, Params> {

@@ -1,4 +1,4 @@
-import '../../../../core/extensions/equatable.dart';
+import '../../../../core/utils/equatable.dart';
 
 class NumberTrivia extends Equatable {
   final String text;
