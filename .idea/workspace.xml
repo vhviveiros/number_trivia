@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec402e55-3963-430d-8134-189a8b120d45" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/core/extensions/input_converter.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/number_trivia/presentation/number_trivia/number_trivia_bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/number_trivia/presentation/number_trivia/number_trivia_event.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/number_trivia/presentation/number_trivia/number_trivia_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/core/extensions/input_converter_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/number_trivia/data/datasources/number_trivia_remote_data_source.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/number_trivia/data/datasources/number_trivia_remote_data_source.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/data/datasources/number_trivia_remote_datasource_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/data/datasources/number_trivia_remote_datasource_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/error/failures.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/error/failures.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +21,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="actions" />
+        <option value="screen" />
+        <option value="event" />
+        <option value="state" />
+        <option value="bloc" />
         <option value="Dart File" />
       </list>
     </option>
@@ -29,11 +39,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Dart" />
+    <property name="settings.editor.selected.configurable" value="flutter.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vhviv\Documents\GitHub\number_trivia\lib\core\extensions" />
       <recent name="C:\Users\vhviv\Documents\GitHub\number_trivia\lib\core\network" />
     </key>
   </component>
@@ -49,20 +60,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Flutter Test.tests in number_trivia_remote_datasource_test.dart">
-    <configuration name="get concrete number trivia" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="get concrete number trivia" />
-      <option name="testFile" value="$PROJECT_DIR$/test/data/datasources/number_trivia_remote_datasource_test.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="getLastNumberTrivia" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="getLastNumberTrivia" />
-      <option name="testFile" value="$PROJECT_DIR$/test/data/datasources/number_trivia_local_datasource_test.dart" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Flutter Test.should return an integer when the string represents an unsigned integer">
     <configuration name="should perform a GET on a URL with a number being the endpoint with json header" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
       <option name="testName" value="should perform a GET on a URL with a number being the endpoint with json header" />
       <option name="testFile" value="$PROJECT_DIR$/test/data/datasources/number_trivia_remote_datasource_test.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="should return an integer when the string represents an unsigned integer" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="should return an integer when the string represents an unsigned integer" />
+      <option name="testFile" value="$PROJECT_DIR$/test/core/extensions/input_converter_test.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="stringTounsignedInt" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="stringTounsignedInt" />
+      <option name="testFile" value="$PROJECT_DIR$/test/core/extensions/input_converter_test.dart" />
       <method v="2" />
     </configuration>
     <configuration name="tests in number_trivia_remote_datasource_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
@@ -76,11 +87,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter Test.should return an integer when the string represents an unsigned integer" />
+        <item itemvalue="Flutter Test.stringTounsignedInt" />
         <item itemvalue="Flutter Test.tests in number_trivia_remote_datasource_test.dart" />
         <item itemvalue="Flutter Test.should perform a GET on a URL with a number being the endpoint with json header" />
         <item itemvalue="Flutter Test.trivia.json" />
-        <item itemvalue="Flutter Test.get concrete number trivia" />
-        <item itemvalue="Flutter Test.getLastNumberTrivia" />
       </list>
     </recent_temporary>
   </component>
@@ -116,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588809647149</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ep 9 finished">
+      <created>1588870092644</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1588870092644</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,6 +154,7 @@
     <MESSAGE value="Next step: device is offline" />
     <MESSAGE value="Next: ep 8" />
     <MESSAGE value="ep 8" />
-    <option name="LAST_COMMIT_MESSAGE" value="ep 8" />
+    <MESSAGE value="ep 9 finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="ep 9 finished" />
   </component>
 </project>
