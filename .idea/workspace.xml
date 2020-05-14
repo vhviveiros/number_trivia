@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ec402e55-3963-430d-8134-189a8b120d45" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/data/datasources/number_trivia_local_datasource_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/data/datasources/number_trivia_local_datasource_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/presentation/bloc/number_trivia_bloc_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/presentation/bloc/number_trivia_bloc_test.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,9 +59,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Flutter Test.tests in number_trivia_remote_datasource_test.dart">
-    <configuration name="get trivia for concrete number" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="get trivia for concrete number" />
+  <component name="RunManager" selected="Flutter Test.tests in number_trivia_bloc_test.dart">
+    <configuration name="should get data from the concrete use case" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="should get data from the concrete use case" />
       <option name="testFile" value="$PROJECT_DIR$/test/presentation/bloc/number_trivia_bloc_test.dart" />
       <method v="2" />
     </configuration>
@@ -86,11 +83,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter Test.tests in number_trivia_bloc_test.dart" />
+        <item itemvalue="Flutter Test.should get data from the concrete use case" />
         <item itemvalue="Flutter Test.tests in number_trivia_remote_datasource_test.dart" />
         <item itemvalue="Flutter Test.tests in number_trivia_local_datasource_test.dart" />
         <item itemvalue="Flutter Test.tests in number_trivia_model_test.dart" />
-        <item itemvalue="Flutter Test.tests in number_trivia_bloc_test.dart" />
-        <item itemvalue="Flutter Test.get trivia for concrete number" />
       </list>
     </recent_temporary>
   </component>
@@ -147,7 +144,21 @@
       <option name="project" value="LOCAL" />
       <updated>1589413760034</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="codemagic test 1">
+      <created>1589492932051</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1589492932051</updated>
+    </task>
+    <task id="LOCAL-00008" summary="codemagic test 2">
+      <created>1589493132285</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1589493132285</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -170,6 +181,8 @@
     <MESSAGE value="ep 9 finished" />
     <MESSAGE value="starting 11/2" />
     <MESSAGE value="finished 11/1" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished 11/1" />
+    <MESSAGE value="codemagic test 1" />
+    <MESSAGE value="codemagic test 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="codemagic test 2" />
   </component>
 </project>
