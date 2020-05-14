@@ -17,7 +17,9 @@ const String CACHE_FAILURE_MESSAGE = "Cache Failure";
 const String INVALID_INPUT_FAILURE_MESSAGE = "Invalid input - the number must be a positive integer";
 
 class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
+  // ignore: unused_field
   final GetConcreteNumberTrivia _getConcreteNumberTrivia;
+  // ignore: unused_field
   final GetRandomNumberTrivia _getRandomNumberTrivia;
   final InputConverter _inputConverter;
 

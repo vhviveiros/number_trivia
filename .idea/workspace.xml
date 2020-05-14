@@ -158,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589493132285</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="codemagic test 3">
+      <created>1589493910079</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1589493910079</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -183,6 +190,7 @@
     <MESSAGE value="finished 11/1" />
     <MESSAGE value="codemagic test 1" />
     <MESSAGE value="codemagic test 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="codemagic test 2" />
+    <MESSAGE value="codemagic test 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="codemagic test 3" />
   </component>
 </project>

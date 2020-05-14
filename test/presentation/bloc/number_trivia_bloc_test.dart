@@ -3,7 +3,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:number_trivia/core/error/failures.dart';
 import 'package:number_trivia/core/utils/input_converter.dart';
-import 'package:number_trivia/features/number_trivia/domain/entities/number_trivia.dart';
 import 'package:number_trivia/features/number_trivia/domain/usecases/get_concrete_number_trivia.dart';
 import 'package:number_trivia/features/number_trivia/domain/usecases/get_random_number_trivia.dart';
 import 'package:number_trivia/features/number_trivia/presentation/number_trivia/number_trivia_bloc.dart';
@@ -37,7 +36,6 @@ main() {
   group('get trivia for concrete number', () {
     final tNumberString = '1';
     final tNumberParsed = int.parse(tNumberString);
-    final tNumberTrivia = NumberTrivia('test trivia', 1);
 
     test("should call the InputConverter to validate and convert the string to an unsigned integer",
         () async {
