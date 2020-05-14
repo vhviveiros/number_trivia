@@ -66,5 +66,20 @@ main() {
         bloc.add(GetTriviaForConcreteNumber(tNumberString));
       },
     );
+
+    test("should get data from the concrete use case", () async {
+      //arrange
+      when(mockGetConcreteNumberTrivia(any)).thenAnswer((_) async => Left(tNumberTrivia));
+      //assert
+      final expected = [
+        // The initial state is always emitted first
+        Empty(),
+        Loading(),
+        Loaded(tNumberTrivia),
+      ];
+      expectLater(bloc, emitsInOrder(expected));
+      //act
+      bloc.add(GetTriviaForConcreteNumber(tNumberString));
+    });
   });
 }
