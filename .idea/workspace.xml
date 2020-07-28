@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ec402e55-3963-430d-8134-189a8b120d45" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/number_trivia/presentation/number_trivia/number_trivia_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/number_trivia/presentation/number_trivia/number_trivia_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/data/repositories/number_trivia_repository_impl_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/data/repositories/number_trivia_repository_impl_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/presentation/bloc/number_trivia_bloc_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/presentation/bloc/number_trivia_bloc_test.dart" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,9 +33,14 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -45,18 +53,6 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="flutter" />
-    </option>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
     </option>
   </component>
   <component name="RunManager" selected="Flutter Test.tests in number_trivia_bloc_test.dart">
@@ -84,10 +80,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Flutter Test.tests in number_trivia_bloc_test.dart" />
-        <item itemvalue="Flutter Test.should get data from the concrete use case" />
-        <item itemvalue="Flutter Test.tests in number_trivia_remote_datasource_test.dart" />
-        <item itemvalue="Flutter Test.tests in number_trivia_local_datasource_test.dart" />
-        <item itemvalue="Flutter Test.tests in number_trivia_model_test.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589493910079</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="codemagic test 4">
+      <created>1589496698510</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1589496698510</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,6 +190,41 @@
     <MESSAGE value="codemagic test 1" />
     <MESSAGE value="codemagic test 2" />
     <MESSAGE value="codemagic test 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="codemagic test 3" />
+    <MESSAGE value="codemagic test 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="codemagic test 4" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#Plugins" timestamp="1595975931881">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Plugins/0.0.1920.1040@0.0.1920.1040" timestamp="1595975931881" />
+    <state width="1877" height="278" key="GridCell.Tab.0.bottom" timestamp="1595969318888">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595969318888" />
+    <state width="1877" height="278" key="GridCell.Tab.0.center" timestamp="1595969318888">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="278" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595969318888" />
+    <state width="1877" height="278" key="GridCell.Tab.0.left" timestamp="1595969318888">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="278" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595969318888" />
+    <state width="1877" height="278" key="GridCell.Tab.0.right" timestamp="1595969318888">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="278" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595969318888" />
+    <state x="526" y="132" key="SettingsEditor" timestamp="1595976221327">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="526" y="132" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1595976221327" />
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1595976128702">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595976128702" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1595975920284">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595975920284" />
   </component>
 </project>
