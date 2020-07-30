@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ec402e55-3963-430d-8134-189a8b120d45" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/number_trivia/presentation/number_trivia/number_trivia_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/number_trivia/presentation/number_trivia/number_trivia_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/data/repositories/number_trivia_repository_impl_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/data/repositories/number_trivia_repository_impl_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/presentation/bloc/number_trivia_bloc_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/presentation/bloc/number_trivia_bloc_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/main.dart" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +37,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -194,10 +191,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="codemagic test 4" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="178" key="#Plugins" timestamp="1595975931881">
+    <state x="552" y="178" key="#Plugins" timestamp="1596040326465">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="178" key="#Plugins/0.0.1920.1040@0.0.1920.1040" timestamp="1595975931881" />
+    <state x="552" y="178" key="#Plugins/0.0.1920.1040@0.0.1920.1040" timestamp="1596040326465" />
     <state width="1877" height="278" key="GridCell.Tab.0.bottom" timestamp="1595969318888">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -214,17 +211,21 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="278" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595969318888" />
-    <state x="526" y="132" key="SettingsEditor" timestamp="1595976221327">
+    <state x="526" y="132" key="SettingsEditor" timestamp="1596040693414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="526" y="132" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1595976221327" />
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1595976128702">
+    <state x="526" y="132" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1596040693414" />
+    <state x="100" y="100" width="1720" height="880" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1596060599734">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595976128702" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1595975920284">
+    <state x="100" y="100" width="1720" height="880" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596060599734" />
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1596060557898">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595975920284" />
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596060557898" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1596040317135">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596040317135" />
   </component>
 </project>
