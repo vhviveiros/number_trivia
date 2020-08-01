@@ -1,4 +1,4 @@
-package com.example.number_trivia
+package com.vhviveiros.number_trivia
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
