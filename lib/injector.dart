@@ -2,12 +2,10 @@ import 'package:data_connection_checker/data_connection_checker.dart';
 import 'package:http/http.dart';
 import 'package:kiwi/kiwi.dart';
 import 'package:number_trivia/core/network/network_info.dart';
+import 'package:number_trivia/core/utils/admanager.dart';
 import 'package:number_trivia/core/utils/input_converter.dart';
-import 'package:number_trivia/features/number_trivia/data/datasources/ad_manager_data_source.dart';
 import 'package:number_trivia/features/number_trivia/data/datasources/number_trivia_remote_data_source.dart';
-import 'package:number_trivia/features/number_trivia/data/repositories/ad_manager_repository_impl.dart';
 import 'package:number_trivia/features/number_trivia/data/repositories/number_trivia_repository_impl.dart';
-import 'package:number_trivia/features/number_trivia/domain/repositories/ad_manager_repository.dart';
 import 'package:number_trivia/features/number_trivia/domain/repositories/number_trivia_repository.dart';
 import 'package:number_trivia/features/number_trivia/domain/usecases/get_concrete_number_trivia.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -67,7 +65,6 @@ abstract class Injector {
     // container.registerInstance();
   }
 
-  @Register.singleton(AdManagerRepository, from: AdManagerRepositoryImpl)
-  @Register.singleton(AdManagerDataSource, from: AdManagerDataSourceImpl)
+  @Register.singleton(AdManager, from: AdManagerImpl)
   void _configureAdManagerDataSourceFactories();
 }

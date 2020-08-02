@@ -1,7 +1,7 @@
 import 'package:admob_flutter/admob_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:number_trivia/features/number_trivia/domain/repositories/ad_manager_repository.dart';
+import 'package:number_trivia/core/utils/admanager.dart';
 import 'package:number_trivia/features/number_trivia/presentation/number_trivia/number_trivia_bloc.dart';
 import 'package:number_trivia/features/number_trivia/presentation/widgets/widgets.dart';
 import 'package:number_trivia/injector.dart';
@@ -35,7 +35,7 @@ class NumberTriviaPage extends StatelessWidget {
                         ),
                         DisplayAds(
                           admobBannerSize: AdmobBannerSize.BANNER,
-                          bannerType: AdManagerRepository.TOP_BANNER,
+                          bannerType: AdManager.TOP_BANNER,
                         ),
                         SizedBox(
                           height: 16,
@@ -52,7 +52,7 @@ class NumberTriviaPage extends StatelessWidget {
                         SizedBox(height: 12),
                         DisplayAds(
                           admobBannerSize: AdmobBannerSize.LARGE_BANNER,
-                          bannerType: AdManagerRepository.BOTTOM_BANNER,
+                          bannerType: AdManager.BOTTOM_BANNER,
                         ),
                       ]);
                     },

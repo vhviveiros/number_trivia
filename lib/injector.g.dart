@@ -35,9 +35,6 @@ class _$Injector extends Injector {
 
   void _configureAdManagerDataSourceFactories() {
     final KiwiContainer container = KiwiContainer();
-    container.registerSingleton<AdManagerRepository>((c) =>
-        AdManagerRepositoryImpl(adManagerDataSource: c<AdManagerDataSource>()));
-    container.registerSingleton<AdManagerDataSource>(
-        (c) => AdManagerDataSourceImpl());
+    container.registerSingleton<AdManager>((c) => AdManagerImpl());
   }
 }

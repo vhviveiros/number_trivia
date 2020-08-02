@@ -1,24 +1,25 @@
 import 'package:admob_flutter/admob_flutter.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:number_trivia/features/number_trivia/domain/repositories/ad_manager_repository.dart';
+import 'package:number_trivia/core/utils/admanager.dart';
 import 'package:number_trivia/injector.dart';
 
 class DisplayAds extends StatelessWidget {
   final AdmobBannerSize admobBannerSize;
   final String bannerType;
 
-  const DisplayAds(
-      {Key key, @required this.admobBannerSize, @required this.bannerType})
-      : super(key: key);
+  const DisplayAds({
+    Key key,
+    @required this.admobBannerSize,
+    @required this.bannerType,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final adManager = Injector.resolve<AdManagerRepository>()
-        .getAdManager(bannerType: bannerType);
+    final repository = Injector.resolve<AdManager>();
 
     return Container(
       child: AdmobBanner(
-          adUnitId: adManager.bannerAdUnitId,
+          adUnitId: repository.getBannerAdUnitId(bannerType: bannerType),
           adSize: admobBannerSize,
           listener: (AdmobAdEvent event, Map<String, dynamic> args) {
             switch (event) {
