@@ -1,43 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:number_trivia/features/number_trivia/domain/entities/number_trivia.dart';
+import 'package:number_trivia/features/number_trivia/presentation/widgets/container.dart';
+
+import 'my_theme.dart';
 
 class TriviaDisplay extends StatelessWidget {
-  final NumberTrivia numberTrivia;
+  final String message;
 
   const TriviaDisplay({
     Key key,
-    this.numberTrivia,
-  })  : assert(numberTrivia != null),
-        super(key: key);
+    @required this.message,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height / 3,
-      child: Column(
-        children: <Widget>[
-          // Fixed size, doesn't scroll
-          Text(
-            numberTrivia.number.toString(),
+    return MyContainer(
+      height: MyTheme.of(context).displayHeight,
+      child: Center(
+        child: SingleChildScrollView(
+          child: SelectableText(
+            message,
             style: TextStyle(
-              fontSize: 50,
-              fontWeight: FontWeight.bold,
-            ),
+                fontSize: 25,
+                fontFamily: 'Roboto',
+                color: Color.fromRGBO(114, 114, 114, 1)),
+            textAlign: TextAlign.center,
           ),
-          // Expanded makes it fill in all the remaining space
-          Expanded(
-            child: Center(
-              // Only the trivia "message" part will be scrollable
-              child: SingleChildScrollView(
-                child: Text(
-                  numberTrivia.text,
-                  style: TextStyle(fontSize: 25),
-                  textAlign: TextAlign.center,
-                ),
-              ),
-            ),
-          )
-        ],
+        ),
       ),
     );
   }

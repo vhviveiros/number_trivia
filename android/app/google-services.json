@@ -1,0 +1,41 @@
+{
+  "project_info": {
+    "project_number": "31686836909",
+    "firebase_url": "https://numbert-c5ef1.firebaseio.com",
+    "project_id": "numbert-c5ef1",
+    "storage_bucket": "numbert-c5ef1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:31686836909:android:d141932c93a0ed1cbcbc24",
+        "android_client_info": {
+          "package_name": "com.vhviveiros.number_trivia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "31686836909-tdi241sfhb5bavkgrc146o27g11im5g3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9rMYV1Uz8mdkjeyaadVpsB1yBAcRVJgQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "31686836909-tdi241sfhb5bavkgrc146o27g11im5g3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-3782628728216687~8960937633"
+    }
+  ],
+  "configuration_version": "1"
+}
