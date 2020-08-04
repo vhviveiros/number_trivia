@@ -1,4 +1,4 @@
-export 'package:number_trivia/features/number_trivia/presentation/widgets/dispatch_controller.dart';
+export 'package:number_trivia/features/number_trivia/presentation/controller/dispatch_controller.dart';
 export 'package:number_trivia/features/number_trivia/presentation/widgets/display_ads.dart';
 export 'package:number_trivia/features/number_trivia/presentation/widgets/loading_widget.dart';
 export 'package:number_trivia/features/number_trivia/presentation/widgets/my_theme.dart';

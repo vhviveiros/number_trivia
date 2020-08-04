@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:number_trivia/features/number_trivia/presentation/controller/dispatch_controller.dart';
 import 'package:number_trivia/features/number_trivia/presentation/widgets/container.dart';
-
-import 'dispatch_controller.dart';
 
 class InputNumber extends StatelessWidget {
   const InputNumber({Key key}) : super(key: key);

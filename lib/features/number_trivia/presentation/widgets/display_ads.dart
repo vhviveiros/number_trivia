@@ -17,30 +17,28 @@ class DisplayAds extends StatelessWidget {
   Widget build(BuildContext context) {
     final repository = Injector.resolve<AdManager>();
 
-    return Container(
-      child: AdmobBanner(
-          adUnitId: repository.getBannerAdUnitId(bannerType: bannerType),
-          adSize: admobBannerSize,
-          listener: (AdmobAdEvent event, Map<String, dynamic> args) {
-            switch (event) {
-              case AdmobAdEvent.loaded:
-                print('Admob banner loaded!');
-                break;
+    return AdmobBanner(
+        adUnitId: repository.getBannerAdUnitId(bannerType: bannerType),
+        adSize: admobBannerSize,
+        listener: (AdmobAdEvent event, Map<String, dynamic> args) {
+          switch (event) {
+            case AdmobAdEvent.loaded:
+              print('Admob banner loaded!');
+              break;
 
-              case AdmobAdEvent.opened:
-                print('Admob banner opened!');
-                break;
+            case AdmobAdEvent.opened:
+              print('Admob banner opened!');
+              break;
 
-              case AdmobAdEvent.closed:
-                print('Admob banner closed!');
-                break;
+            case AdmobAdEvent.closed:
+              print('Admob banner closed!');
+              break;
 
-              case AdmobAdEvent.failedToLoad:
-                print(
-                    'Admob banner failed to load. Error code: ${args['errorCode']}');
-                break;
-            }
-          }),
-    );
+            case AdmobAdEvent.failedToLoad:
+              print(
+                  'Admob banner failed to load. Error code: ${args['errorCode']}');
+              break;
+          }
+        });
   }
 }

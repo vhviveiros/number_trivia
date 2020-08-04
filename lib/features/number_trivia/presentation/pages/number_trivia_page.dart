@@ -36,6 +36,7 @@ class NumberTriviaPage extends StatelessWidget {
                         DisplayAds(
                           admobBannerSize: AdmobBannerSize.BANNER,
                           bannerType: AdManager.TOP_BANNER,
+                          key: Key('top_banner'),
                         ),
                         SizedBox(
                           height: 16,
@@ -53,6 +54,7 @@ class NumberTriviaPage extends StatelessWidget {
                         DisplayAds(
                           admobBannerSize: AdmobBannerSize.LARGE_BANNER,
                           bannerType: AdManager.BOTTOM_BANNER,
+                          key: Key('bottom_banner'),
                         ),
                       ]);
                     },

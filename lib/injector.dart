@@ -27,7 +27,7 @@ abstract class Injector {
 
   Future<void> _configure() async {
     await _configureNumberTriviaDataSourceModule();
-    _configureAdManagerDataSourceModule();
+    _configureAdManagerModule();
   }
 
   //! NumberTriviaLocalDataSource
@@ -56,15 +56,15 @@ abstract class Injector {
   void _configureNumberTriviaDataSourceFactories();
 
   //! AdManagerDataSource
-  void _configureAdManagerDataSourceModule() {
-    _configureAdManagerDataSourceInstances();
-    _configureAdManagerDataSourceFactories();
+  void _configureAdManagerModule() {
+    _configureAdManagerInstances();
+    _configureAdManagerFactories();
   }
 
-  void _configureAdManagerDataSourceInstances() {
+  void _configureAdManagerInstances() {
     // container.registerInstance();
   }
 
   @Register.singleton(AdManager, from: AdManagerImpl)
-  void _configureAdManagerDataSourceFactories();
+  void _configureAdManagerFactories();
 }

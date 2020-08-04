@@ -16,10 +16,12 @@ class NumberTriviaRemoteDataSourceImpl implements NumberTriviaRemoteDataSource {
   NumberTriviaRemoteDataSourceImpl(this._httpClient);
 
   @override
-  Future<NumberTriviaModel> getConcreteNumberTrivia(int number) => _getNumberTriviaFrom(number);
+  Future<NumberTriviaModel> getConcreteNumberTrivia(int number) =>
+      _getNumberTriviaFrom(number);
 
   @override
-  Future<NumberTriviaModel> getRandomNumberTrivia() => _getNumberTriviaFrom('random');
+  Future<NumberTriviaModel> getRandomNumberTrivia() =>
+      _getNumberTriviaFrom('random');
 
   Future<NumberTriviaModel> _getNumberTriviaFrom(dynamic typeSelector) async {
     final response = await _httpClient.get(

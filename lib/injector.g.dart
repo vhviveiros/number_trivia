@@ -33,7 +33,7 @@ class _$Injector extends Injector {
         (c) => NumberTriviaLocalDataSourceImpl(c<SharedPreferences>()));
   }
 
-  void _configureAdManagerDataSourceFactories() {
+  void _configureAdManagerFactories() {
     final KiwiContainer container = KiwiContainer();
     container.registerSingleton<AdManager>((c) => AdManagerImpl());
   }

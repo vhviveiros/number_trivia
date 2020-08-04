@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'dispatch_controller.dart';
+import 'package:number_trivia/features/number_trivia/presentation/controller/dispatch_controller.dart';
 
 class TriviaControls extends StatefulWidget {
   const TriviaControls({
