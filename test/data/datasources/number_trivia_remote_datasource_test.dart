@@ -15,6 +15,18 @@ main() {
   NumberTriviaRemoteDataSourceImpl dataSource;
   MockHttpClient mockHttpClient;
 
+  final jsonString = fixture('trivia.json');
+
+  void setupMockHttpClientResponse200({customJson}) {
+    when(mockHttpClient.get(any, headers: anyNamed('headers')))
+        .thenAnswer((_) async => Response(customJson ?? jsonString, 200));
+  }
+
+  void setupMockHttpClientResponse404() {
+    when(mockHttpClient.get(any, headers: anyNamed('headers')))
+        .thenAnswer((_) async => Response('Something went wrong', 404));
+  }
+
   setUp(() {
     mockHttpClient = MockHttpClient();
     dataSource = NumberTriviaRemoteDataSourceImpl(mockHttpClient);
@@ -22,18 +34,13 @@ main() {
 
   group('get concrete number trivia', () {
     final tNumber = 1;
-    final jsonString = fixture('trivia.json');
-    final tNumberTriviaModel = NumberTriviaModel.fromJson(json.decode(jsonString));
-    void setupMockHttpClientResponse200() {
-      when(mockHttpClient.get(any, headers: anyNamed('headers')))
-          .thenAnswer((_) async => Response(jsonString, 200));
-    }
-    void setupMockHttpClientResponse404() {
-      when(mockHttpClient.get(any, headers: anyNamed('headers')))
-          .thenAnswer((_) async => Response('Something went wrong', 404));
-    }
 
-    test("should perform a GET on a URL with a number being the endpoint with json header", () async {
+    final tNumberTriviaModel =
+        NumberTriviaModel.fromJson(json.decode(jsonString));
+
+    test(
+        "should perform a GET on a URL with a number being the endpoint with json header",
+        () async {
       //arrange
       setupMockHttpClientResponse200();
       //act
@@ -45,7 +52,8 @@ main() {
       ));
     });
 
-    test("should return numberTrivia when response code is 200 (success)", () async {
+    test("should return numberTrivia when response code is 200 (success)",
+        () async {
       //arrange
       setupMockHttpClientResponse200();
       //act
@@ -54,9 +62,19 @@ main() {
       expect(result, equals(tNumberTriviaModel));
     });
 
-    test("should throw a ServerException when the response is different of 200", () async {
+    test("should throw a ServerException when the response is different of 200",
+        () async {
       //arrange
       setupMockHttpClientResponse404();
+      //act
+      final call = dataSource.getConcreteNumberTrivia;
+      //assert
+      expect(() => call(tNumber), throwsA(isInstanceOf<ServerException>()));
+    });
+
+    test('should throw a ServerException when the response is null', () async {
+      //arrange
+      setupMockHttpClientResponse200(customJson: fixture('trivia_null.json'));
       //act
       final call = dataSource.getConcreteNumberTrivia;
       //assert
@@ -65,18 +83,12 @@ main() {
   });
 
   group('get random number trivia', () {
-    final jsonString = fixture('trivia.json');
-    final tNumberTriviaModel = NumberTriviaModel.fromJson(json.decode(jsonString));
-    void setupMockHttpClientResponse200() {
-      when(mockHttpClient.get(any, headers: anyNamed('headers')))
-          .thenAnswer((_) async => Response(jsonString, 200));
-    }
-    void setupMockHttpClientResponse404() {
-      when(mockHttpClient.get(any, headers: anyNamed('headers')))
-          .thenAnswer((_) async => Response('Something went wrong', 404));
-    }
+    final tNumberTriviaModel =
+        NumberTriviaModel.fromJson(json.decode(jsonString));
 
-    test("should perform a GET on a URL with a number being the endpoint with json header", () async {
+    test(
+        "should perform a GET on a URL with a number being the endpoint with json header",
+        () async {
       //arrange
       setupMockHttpClientResponse200();
       //act
@@ -88,7 +100,8 @@ main() {
       ));
     });
 
-    test("should return numberTrivia when response code is 200 (success)", () async {
+    test("should return numberTrivia when response code is 200 (success)",
+        () async {
       //arrange
       setupMockHttpClientResponse200();
       //act
@@ -97,9 +110,19 @@ main() {
       expect(result, equals(tNumberTriviaModel));
     });
 
-    test("should throw a ServerException when the response is different of 200", () async {
+    test("should throw a ServerException when the response is different of 200",
+        () async {
       //arrange
       setupMockHttpClientResponse404();
+      //act
+      final call = dataSource.getRandomNumberTrivia;
+      //assert
+      expect(() => call(), throwsA(isInstanceOf<ServerException>()));
+    });
+
+    test('should throw a ServerException when the response is null', () async {
+      //arrange
+      setupMockHttpClientResponse200(customJson: fixture('trivia_null.json'));
       //act
       final call = dataSource.getRandomNumberTrivia;
       //assert
