@@ -6,21 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ec402e55-3963-430d-8134-189a8b120d45" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/kotlin/com/example/number_trivia/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/kotlin/com/vhviveiros/number_trivia/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/profile/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/profile/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/number_trivia/data/datasources/number_trivia_local_data_source.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/number_trivia/data/datasources/number_trivia_local_data_source.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/number_trivia/domain/entities/number_trivia.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/number_trivia/domain/entities/number_trivia.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/number_trivia/presentation/pages/number_trivia_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/number_trivia/presentation/pages/number_trivia_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/number_trivia/presentation/widgets/loading_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/number_trivia/presentation/widgets/loading_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/number_trivia/presentation/widgets/message_display.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/number_trivia/presentation/widgets/trivia_display.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/number_trivia/presentation/widgets/trivia_display.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/injection_container.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +45,7 @@
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/android" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -218,10 +208,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Plugins/0.0.1920.1040@0.0.1920.1040" timestamp="1596301485498" />
-    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1596246945588">
+    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1596555323427">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1596246945588" />
+    <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1596555323427" />
     <state width="1876" height="324" key="GridCell.Tab.0.bottom" timestamp="1596304828699">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -250,13 +240,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="100" y="100" width="1720" height="880" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596060599734" />
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1596301426391">
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1596555797852">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596301426391" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1596301462111">
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596555797852" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1596555300253">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596301462111" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596555300253" />
   </component>
 </project>
