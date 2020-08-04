@@ -2,7 +2,6 @@ import 'package:data_connection_checker/data_connection_checker.dart';
 import 'package:http/http.dart';
 import 'package:kiwi/kiwi.dart';
 import 'package:number_trivia/core/network/network_info.dart';
-import 'package:number_trivia/core/utils/admanager.dart';
 import 'package:number_trivia/core/utils/input_converter.dart';
 import 'package:number_trivia/features/number_trivia/data/datasources/number_trivia_remote_data_source.dart';
 import 'package:number_trivia/features/number_trivia/data/repositories/number_trivia_repository_impl.dart';
@@ -27,7 +26,6 @@ abstract class Injector {
 
   Future<void> _configure() async {
     await _configureNumberTriviaDataSourceModule();
-    _configureAdManagerModule();
   }
 
   //! NumberTriviaLocalDataSource
@@ -54,17 +52,4 @@ abstract class Injector {
   @Register.singleton(NumberTriviaLocalDataSource,
       from: NumberTriviaLocalDataSourceImpl)
   void _configureNumberTriviaDataSourceFactories();
-
-  //! AdManagerDataSource
-  void _configureAdManagerModule() {
-    _configureAdManagerInstances();
-    _configureAdManagerFactories();
-  }
-
-  void _configureAdManagerInstances() {
-    // container.registerInstance();
-  }
-
-  @Register.singleton(AdManager, from: AdManagerImpl)
-  void _configureAdManagerFactories();
 }

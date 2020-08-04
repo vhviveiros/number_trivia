@@ -1,7 +1,5 @@
-import 'package:admob_flutter/admob_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:number_trivia/core/utils/admanager.dart';
 import 'package:number_trivia/features/number_trivia/presentation/number_trivia/number_trivia_bloc.dart';
 import 'package:number_trivia/features/number_trivia/presentation/widgets/widgets.dart';
 import 'package:number_trivia/injector.dart';
@@ -31,12 +29,10 @@ class NumberTriviaPage extends StatelessWidget {
                       final myTheme = MyTheme.of(context);
                       return Column(children: [
                         SizedBox(
-                          height: 24,
-                        ),
-                        DisplayAds(
-                          admobBannerSize: AdmobBannerSize.BANNER,
-                          bannerType: AdManager.TOP_BANNER,
-                          key: Key('top_banner'),
+                          height: MediaQuery.of(context).orientation ==
+                                  Orientation.portrait
+                              ? 64
+                              : 24,
                         ),
                         SizedBox(
                           height: 16,
@@ -51,11 +47,6 @@ class NumberTriviaPage extends StatelessWidget {
                         myTheme.spacingBox(),
                         TriviaControls(width: myTheme.width),
                         SizedBox(height: 12),
-                        DisplayAds(
-                          admobBannerSize: AdmobBannerSize.LARGE_BANNER,
-                          bannerType: AdManager.BOTTOM_BANNER,
-                          key: Key('bottom_banner'),
-                        ),
                       ]);
                     },
                   ),

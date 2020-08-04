@@ -69,7 +69,7 @@ main() {
         final expected = [
           // The initial state is always emitted first
           Empty(),
-          Error(INVALID_INPUT_FAILURE_MESSAGE),
+          Error(Failure.INVALID_INPUT_FAILURE_MESSAGE),
         ];
         expectLater(bloc, emitsInOrder(expected));
         // act
@@ -119,7 +119,7 @@ main() {
       final expected = [
         Empty(),
         Loading(),
-        Error(SERVER_FAILURE_MESSAGE),
+        Error(Failure.SERVER_FAILURE_MESSAGE),
       ];
 
       expectLater(bloc, emitsInOrder(expected));
@@ -139,7 +139,7 @@ main() {
       final expected = [
         Empty(),
         Loading(),
-        Error(CACHE_FAILURE_MESSAGE),
+        Error(Failure.CACHE_FAILURE_MESSAGE),
       ];
 
       expectLater(bloc, emitsInOrder(expected));
@@ -191,7 +191,7 @@ main() {
       final expected = [
         Empty(),
         Loading(),
-        Error(SERVER_FAILURE_MESSAGE),
+        Error(Failure.SERVER_FAILURE_MESSAGE),
       ];
 
       expectLater(bloc, emitsInOrder(expected));
@@ -210,7 +210,7 @@ main() {
       final expected = [
         Empty(),
         Loading(),
-        Error(CACHE_FAILURE_MESSAGE),
+        Error(Failure.CACHE_FAILURE_MESSAGE),
       ];
 
       expectLater(bloc, emitsInOrder(expected));
