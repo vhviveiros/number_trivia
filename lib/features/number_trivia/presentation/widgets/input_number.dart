@@ -10,21 +10,19 @@ class InputNumber extends StatelessWidget {
     final _dispatchController = DispatchController.of(context);
     final _textController = _dispatchController.textController;
     final _focusNode = _dispatchController.focusNode;
-    String inputStr;
 
     return MyContainer(
       child: TextField(
         focusNode: _focusNode,
-        autofocus: true,
+        autofocus: false,
         controller: _textController,
         keyboardType: TextInputType.number,
         decoration: InputDecoration(
           border: InputBorder.none,
           hintText: 'Discover a fact about some number :D',
         ),
-        onChanged: (value) => inputStr = value,
         onSubmitted: (_) =>
-            _dispatchController.dispatchConcrete(inputStr, context),
+            _dispatchController.dispatchConcrete(_textController.text, context),
       ),
     );
   }

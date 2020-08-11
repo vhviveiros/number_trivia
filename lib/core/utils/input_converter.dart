@@ -7,7 +7,7 @@ class InputConverter {
       final integer = int.parse(str);
       if (integer < 0) throw FormatException();
       return Left(integer);
-    } on FormatException {
+    } on Exception {
       return Right(InvalidInputFailure());
     }
   }

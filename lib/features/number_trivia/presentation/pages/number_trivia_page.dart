@@ -7,21 +7,24 @@ import 'package:number_trivia/features/number_trivia/presentation/widgets/widget
 import 'package:number_trivia/injector.dart';
 
 class NumberTriviaPage extends StatelessWidget {
-  const NumberTriviaPage({Key key}) : super(key: key);
+  NumberTriviaPage({Key key}) : super(key: key);
+
+  final textController = TextEditingController();
+  final focusNode = FocusNode();
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: MyTheme(
-        displayHeight: MediaQuery.of(context).size.height / 2.2,
-        width: MediaQuery.of(context).size.width * 0.85,
-        insets: EdgeInsets.only(bottom: 4, top: 4, left: 8, right: 8),
-        spacing: 32,
-        child: BlocProvider<NumberTriviaBloc>(
-          create: (context) => Injector.resolve<NumberTriviaBloc>(),
-          child: DispatchController(
-            TextEditingController(),
-            FocusNode(),
+    return DispatchController(
+      textController,
+      focusNode,
+      child: Scaffold(
+        body: MyTheme(
+          displayHeight: MediaQuery.of(context).size.height / 2.2,
+          width: MediaQuery.of(context).size.width * 0.85,
+          insets: EdgeInsets.only(bottom: 4, top: 4, left: 8, right: 8),
+          spacing: 32,
+          child: BlocProvider<NumberTriviaBloc>(
+            create: (context) => Injector.resolve<NumberTriviaBloc>(),
             child: Stack(children: [
               BackGround(),
               SingleChildScrollView(
@@ -36,7 +39,6 @@ class NumberTriviaPage extends StatelessWidget {
                         DisplayAds(
                           admobBannerSize: AdmobBannerSize.BANNER,
                           bannerType: AdManager.TOP_BANNER,
-                          key: Key('top_banner'),
                         ),
                         SizedBox(
                           height: 16,
@@ -54,7 +56,6 @@ class NumberTriviaPage extends StatelessWidget {
                         DisplayAds(
                           admobBannerSize: AdmobBannerSize.LARGE_BANNER,
                           bannerType: AdManager.BOTTOM_BANNER,
-                          key: Key('bottom_banner'),
                         ),
                       ]);
                     },

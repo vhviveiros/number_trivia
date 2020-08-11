@@ -9,12 +9,14 @@ abstract class AdManager {
   static const TOP_BANNER = 'top_banner';
   static const BOTTOM_BANNER = 'bottom_banner';
   static const TEST_BANNER = 'test_banner';
+  static const FULL_BANNER = 'full_banner';
 }
 
 class AdManagerImpl extends AdManager {
   final _bannerIds = {
     AdManager.TOP_BANNER: 'ca-app-pub-3782628728216687/7143269561',
     AdManager.BOTTOM_BANNER: 'ca-app-pub-3782628728216687/6458897370',
+    AdManager.FULL_BANNER: 'ca-app-pub-3782628728216687/4035961747',
     AdManager.TEST_BANNER: 'ca-app-pub-3940256099942544/6300978111',
   };
 
