@@ -8,15 +8,13 @@
   <component name="ChangeListManager">
     <list default="true" id="ec402e55-3963-430d-8134-189a8b120d45" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/number_trivia/presentation/pages/number_trivia_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/number_trivia/presentation/pages/number_trivia_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="c7a0ce3d" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_27" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -45,7 +43,7 @@
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -211,26 +209,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1596246945588" />
-    <state width="1877" height="587" key="GridCell.Tab.0.bottom" timestamp="1596753819635">
+    <state width="1556" height="299" key="GridCell.Tab.0.bottom" timestamp="1597966411470">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="587" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596753819635" />
-    <state width="1877" height="587" key="GridCell.Tab.0.center" timestamp="1596753819634">
+    <state width="1556" height="299" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597966411470" />
+    <state width="1556" height="299" key="GridCell.Tab.0.center" timestamp="1597966411469">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="587" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596753819634" />
-    <state width="1877" height="587" key="GridCell.Tab.0.left" timestamp="1596753819634">
+    <state width="1556" height="299" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597966411469" />
+    <state width="1556" height="299" key="GridCell.Tab.0.left" timestamp="1597966411469">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="587" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596753819634" />
-    <state width="1877" height="587" key="GridCell.Tab.0.right" timestamp="1596753819634">
+    <state width="1556" height="299" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597966411469" />
+    <state width="1556" height="299" key="GridCell.Tab.0.right" timestamp="1597966411470">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="587" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596753819634" />
-    <state x="526" y="132" key="SettingsEditor" timestamp="1596040693414">
+    <state width="1556" height="299" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597966411470" />
+    <state x="526" y="132" key="SettingsEditor" timestamp="1597966290964">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="526" y="132" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1596040693414" />
+    <state x="526" y="132" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1597966290964" />
     <state x="552" y="272" key="Vcs.Push.Dialog.v2" timestamp="1596304716504">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -239,13 +237,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="100" y="100" width="1720" height="880" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596060599734" />
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1597093544825">
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1597966249741">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597093544825" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1596301462111">
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597966249741" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1597966373694">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1596301462111" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597966373694" />
   </component>
 </project>

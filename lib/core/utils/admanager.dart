@@ -25,7 +25,7 @@ class AdManagerImpl extends AdManager {
 
   @override
   String getBannerAdUnitId({String bannerType}) {
-    if (Platform.isAndroid) {
+    if (true) {
       return _bannerIds[bannerType];
     } else {
       throw new UnsupportedError("Unsupported platform");

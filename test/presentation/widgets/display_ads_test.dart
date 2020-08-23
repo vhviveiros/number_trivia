@@ -16,7 +16,7 @@ Future<void> main() async {
 
   triviaPage = MaterialApp(
     home: Scaffold(
-      body: const NumberTriviaPage(),
+      body: NumberTriviaPage(),
     ),
   );
 

@@ -35,7 +35,7 @@ main() {
   });
 
   test('initial state should be empty',
-      () async => {expect(bloc.initialState, Empty())});
+      () async => {expect(bloc.state, Empty())});
 
   group('get trivia for concrete number', () {
     final tNumberString = '1';
@@ -68,7 +68,6 @@ main() {
         // assert later
         final expected = [
           // The initial state is always emitted first
-          Empty(),
           Error(INVALID_INPUT_FAILURE_MESSAGE),
         ];
         expectLater(bloc, emitsInOrder(expected));
@@ -98,7 +97,6 @@ main() {
 
       //assert later
       final expected = [
-        Empty(),
         Loading(),
         Loaded(tNumberTrivia),
       ];
@@ -117,7 +115,6 @@ main() {
 
       //assert later
       final expected = [
-        Empty(),
         Loading(),
         Error(SERVER_FAILURE_MESSAGE),
       ];
@@ -137,7 +134,6 @@ main() {
 
       //assert later
       final expected = [
-        Empty(),
         Loading(),
         Error(CACHE_FAILURE_MESSAGE),
       ];
@@ -171,7 +167,6 @@ main() {
 
       //assert later
       final expected = [
-        Empty(),
         Loading(),
         Loaded(tNumberTrivia),
       ];
@@ -189,7 +184,6 @@ main() {
 
       //assert later
       final expected = [
-        Empty(),
         Loading(),
         Error(SERVER_FAILURE_MESSAGE),
       ];
@@ -208,7 +202,6 @@ main() {
 
       //assert later
       final expected = [
-        Empty(),
         Loading(),
         Error(CACHE_FAILURE_MESSAGE),
       ];

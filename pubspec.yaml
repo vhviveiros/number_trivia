@@ -19,8 +19,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_bloc: ^4.0.0
-  equatable: ^1.1.1
+  flutter_bloc: ^6.0.1
+  equatable: ^1.2.4
   data_connection_checker: ^0.3.4
   http: ^0.12.1
   shared_preferences: ^0.5.7+2
@@ -39,19 +39,18 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   mockito: ^4.1.1
-  build_runner:
+  build_runner: null
   kiwi_generator: ^2.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
-
 # The following section is specific to Flutter.
 flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
-  
+
   assets:
     - lib/features/number_trivia/presentation/img/bg.png
   # To add assets to your application, add an assets section, like this:
@@ -81,3 +80,4 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
