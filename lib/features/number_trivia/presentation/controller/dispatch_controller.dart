@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:number_trivia/features/number_trivia/presentation/number_trivia/number_trivia_bloc.dart';
+import 'package:number_trivia/features/number_trivia/presentation/number_trivia/number_trivia_cubit.dart';
 
 class DispatchController extends InheritedWidget {
   final TextEditingController textController;
@@ -17,12 +17,12 @@ class DispatchController extends InheritedWidget {
 
   void dispatchConcrete(String inputStr, BuildContext context) {
     textController.clear();
-    BlocProvider.of<NumberTriviaBloc>(context)
-        .add(GetTriviaForConcreteNumber(inputStr));
+    BlocProvider.of<NumberTriviaCubit>(context)
+        .getTriviaForConcreteNumber(inputStr);
     focusNode.requestFocus();
   }
 
   void dispatchRandom(BuildContext context) {
-    BlocProvider.of<NumberTriviaBloc>(context).add(GetTriviaForRandomNumber());
+    BlocProvider.of<NumberTriviaCubit>(context).getTriviaForRandomNumber();
   }
 }

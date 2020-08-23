@@ -1,8 +1,6 @@
-import 'dart:async';
-
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
-import 'package:meta/meta.dart';
+import 'package:flutter/material.dart';
 import 'package:number_trivia/core/error/failures.dart';
 import 'package:number_trivia/core/usecases/usecase.dart';
 import 'package:number_trivia/core/utils/equatable.dart';
@@ -11,8 +9,6 @@ import 'package:number_trivia/features/number_trivia/domain/entities/number_triv
 import 'package:number_trivia/features/number_trivia/domain/usecases/get_concrete_number_trivia.dart';
 import 'package:number_trivia/features/number_trivia/domain/usecases/get_random_number_trivia.dart';
 
-part 'number_trivia_event.dart';
-
 part 'number_trivia_state.dart';
 
 const String SERVER_FAILURE_MESSAGE = "Server Failure";
@@ -20,39 +16,37 @@ const String CACHE_FAILURE_MESSAGE = "Cache Failure";
 const String INVALID_INPUT_FAILURE_MESSAGE =
     "Invalid input - the number must be a positive integer";
 
-class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
+class NumberTriviaCubit extends Cubit<NumberTriviaState> {
   final GetConcreteNumberTrivia _getConcreteNumberTrivia;
   final GetRandomNumberTrivia _getRandomNumberTrivia;
   final InputConverter _inputConverter;
 
-  NumberTriviaBloc(this._getConcreteNumberTrivia, this._getRandomNumberTrivia,
+  NumberTriviaCubit(this._getConcreteNumberTrivia, this._getRandomNumberTrivia,
       this._inputConverter)
       : assert(_getRandomNumberTrivia != null),
         assert(_getConcreteNumberTrivia != null),
         assert(_inputConverter != null),
         super(Empty());
 
-  @override
-  Stream<NumberTriviaState> mapEventToState(NumberTriviaEvent event) async* {
-    if (event is GetTriviaForConcreteNumber) {
-      final result =
-          _inputConverter.stringToUnsignedInteger(event.numberString);
-      yield* result.fold(
-        (value) async* {
-          yield Loading();
-          final failureOrTrivia =
-              await _getConcreteNumberTrivia.call(Params(value));
-          yield _eitherLoadedOrErrorState(failureOrTrivia);
-        },
-        (failure) async* {
-          yield Error(INVALID_INPUT_FAILURE_MESSAGE);
-        },
-      );
-    } else if (event is GetTriviaForRandomNumber) {
-      yield Loading();
-      final failureOrTrivia = await _getRandomNumberTrivia.call(NoParams());
-      yield _eitherLoadedOrErrorState(failureOrTrivia);
-    }
+  Future<void> getTriviaForConcreteNumber(String numberString) {
+    final result = _inputConverter.stringToUnsignedInteger(numberString);
+    result.fold(
+      (value) async* {
+        emit(Loading());
+        final failureOrTrivia =
+            await _getConcreteNumberTrivia.call(Params(value));
+        emit(_eitherLoadedOrErrorState(failureOrTrivia));
+      },
+      (failure) {
+        emit(Error(INVALID_INPUT_FAILURE_MESSAGE));
+      },
+    );
+  }
+
+  Future<void> getTriviaForRandomNumber() async {
+    emit(Loading());
+    final failureOrTrivia = await _getRandomNumberTrivia.call(NoParams());
+    emit(_eitherLoadedOrErrorState(failureOrTrivia));
   }
 
   NumberTriviaState _eitherLoadedOrErrorState(

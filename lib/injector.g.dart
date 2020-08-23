@@ -9,7 +9,7 @@ part of 'injector.dart';
 class _$Injector extends Injector {
   void _configureNumberTriviaDataSourceFactories() {
     final KiwiContainer container = KiwiContainer();
-    container.registerFactory((c) => NumberTriviaBloc(
+    container.registerFactory((c) => NumberTriviaCubit(
         c<GetConcreteNumberTrivia>(),
         c<GetRandomNumberTrivia>(),
         c<InputConverter>()));

@@ -1,4 +1,4 @@
-part of 'number_trivia_bloc.dart';
+part of 'number_trivia_cubit.dart';
 
 @immutable
 abstract class NumberTriviaState extends Equatable {

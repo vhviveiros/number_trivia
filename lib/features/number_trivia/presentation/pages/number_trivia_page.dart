@@ -2,7 +2,7 @@ import 'package:admob_flutter/admob_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:number_trivia/core/utils/admanager.dart';
-import 'package:number_trivia/features/number_trivia/presentation/number_trivia/number_trivia_bloc.dart';
+import 'package:number_trivia/features/number_trivia/presentation/number_trivia/number_trivia_cubit.dart';
 import 'package:number_trivia/features/number_trivia/presentation/widgets/widgets.dart';
 import 'package:number_trivia/injector.dart';
 
@@ -23,8 +23,8 @@ class NumberTriviaPage extends StatelessWidget {
           width: MediaQuery.of(context).size.width * 0.85,
           insets: EdgeInsets.only(bottom: 4, top: 4, left: 8, right: 8),
           spacing: 32,
-          child: BlocProvider<NumberTriviaBloc>(
-            create: (context) => Injector.resolve<NumberTriviaBloc>(),
+          child: BlocProvider<NumberTriviaCubit>(
+            create: (context) => Injector.resolve<NumberTriviaCubit>(),
             child: Stack(children: [
               BackGround(),
               SingleChildScrollView(
@@ -43,7 +43,7 @@ class NumberTriviaPage extends StatelessWidget {
                         SizedBox(
                           height: 16,
                         ),
-                        BlocBuilder<NumberTriviaBloc, NumberTriviaState>(
+                        BlocBuilder<NumberTriviaCubit, NumberTriviaState>(
                           // ignore: missing_return
                           builder: (context, state) =>
                               _getTriviaDisplay(state, context),
