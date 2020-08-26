@@ -50,6 +50,8 @@ main() {
         "should call the InputConverter to validate and convert the string to an unsigned integer",
         () async {
       setUpMockInputConverterSuccess();
+      when(mockGetConcreteNumberTrivia.call(any))
+          .thenAnswer((realInvocation) => Future.value(Left(tNumberTrivia)));
       //act
       cubit.getTriviaForConcreteNumber(tNumberString);
       await untilCalled(mockInputConverter.stringToUnsignedInteger(any));

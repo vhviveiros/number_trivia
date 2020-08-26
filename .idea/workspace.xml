@@ -8,6 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ec402e55-3963-430d-8134-189a8b120d45" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/number_trivia/data/datasources/number_trivia_local_data_source.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/number_trivia/data/datasources/number_trivia_local_data_source.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/number_trivia/domain/repositories/number_trivia_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/number_trivia/domain/repositories/number_trivia_repository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/number_trivia/domain/usecases/get_concrete_number_trivia.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/number_trivia/domain/usecases/get_concrete_number_trivia.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/number_trivia/presentation/number_trivia/number_trivia_cubit.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/number_trivia/presentation/number_trivia/number_trivia_cubit.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,13 +62,13 @@
       <command value="flutter" />
     </option>
   </component>
-  <component name="RunManager" selected="Flutter.main.dart">
+  <component name="RunManager" selected="Flutter Test.should call the InputConverter to validate and convert the string to an unsigned integer">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="should get data from the concrete use case" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="should get data from the concrete use case" />
+    <configuration name="should call the InputConverter to validate and convert the string to an unsigned integer" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="should call the InputConverter to validate and convert the string to an unsigned integer" />
       <option name="testFile" value="$PROJECT_DIR$/test/presentation/bloc/number_trivia_bloc_test.dart" />
       <method v="2" />
     </configuration>
@@ -86,6 +90,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter Test.should call the InputConverter to validate and convert the string to an unsigned integer" />
         <item itemvalue="Flutter Test.tests in number_trivia_bloc_test.dart" />
       </list>
     </recent_temporary>
@@ -209,22 +214,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1596246945588" />
-    <state width="1556" height="299" key="GridCell.Tab.0.bottom" timestamp="1597966411470">
+    <state width="1877" height="517" key="GridCell.Tab.0.bottom" timestamp="1598390803134">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1556" height="299" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597966411470" />
-    <state width="1556" height="299" key="GridCell.Tab.0.center" timestamp="1597966411469">
+    <state width="1877" height="517" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598390803134" />
+    <state width="1877" height="517" key="GridCell.Tab.0.center" timestamp="1598390803134">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1556" height="299" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597966411469" />
-    <state width="1556" height="299" key="GridCell.Tab.0.left" timestamp="1597966411469">
+    <state width="1877" height="517" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598390803134" />
+    <state width="1877" height="517" key="GridCell.Tab.0.left" timestamp="1598390803134">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1556" height="299" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597966411469" />
-    <state width="1556" height="299" key="GridCell.Tab.0.right" timestamp="1597966411470">
+    <state width="1877" height="517" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598390803134" />
+    <state width="1877" height="517" key="GridCell.Tab.0.right" timestamp="1598390803134">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1556" height="299" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597966411470" />
+    <state width="1877" height="517" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598390803134" />
     <state x="526" y="132" key="SettingsEditor" timestamp="1597966290964">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -237,13 +242,44 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="100" y="100" width="1720" height="880" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596060599734" />
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1597966249741">
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1598390734753">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597966249741" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1597966373694">
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598390734753" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1598390743817">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597966373694" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598390743817" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/features/number_trivia/presentation/number_trivia/number_trivia_cubit.dart</url>
+          <line>36</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/features/number_trivia/presentation/number_trivia/number_trivia_cubit.dart</url>
+          <line>35</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/features/number_trivia/presentation/number_trivia/number_trivia_cubit.dart</url>
+          <line>53</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/features/number_trivia/presentation/number_trivia/number_trivia_cubit.dart</url>
+          <line>32</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/features/number_trivia/domain/usecases/get_concrete_number_trivia.dart</url>
+          <line>14</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

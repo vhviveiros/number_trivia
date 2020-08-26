@@ -28,14 +28,14 @@ class NumberTriviaCubit extends Cubit<NumberTriviaState> {
         assert(_inputConverter != null),
         super(Empty());
 
-  Future<void> getTriviaForConcreteNumber(String numberString) {
+  Future<void> getTriviaForConcreteNumber(String numberString) async {
     final result = _inputConverter.stringToUnsignedInteger(numberString);
-    result.fold(
-      (value) async* {
+    await result.fold(
+      (value) async {
         emit(Loading());
-        final failureOrTrivia =
+        final concreteTrivia =
             await _getConcreteNumberTrivia.call(Params(value));
-        emit(_eitherLoadedOrErrorState(failureOrTrivia));
+        emit(_eitherLoadedOrErrorState(concreteTrivia));
       },
       (failure) {
         emit(Error(INVALID_INPUT_FAILURE_MESSAGE));
