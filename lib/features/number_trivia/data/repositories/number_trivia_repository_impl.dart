@@ -5,11 +5,10 @@ import 'package:number_trivia/core/error/failures.dart';
 import 'package:number_trivia/core/network/network_info.dart';
 import 'package:number_trivia/features/number_trivia/data/datasources/number_trivia_local_data_source.dart';
 import 'package:number_trivia/features/number_trivia/data/datasources/number_trivia_remote_data_source.dart';
-import 'package:number_trivia/features/number_trivia/data/models/number_trivia_model.dart';
 import 'package:number_trivia/features/number_trivia/domain/entities/number_trivia.dart';
 import 'package:number_trivia/features/number_trivia/domain/repositories/number_trivia_repository.dart';
 
-typedef Future<NumberTriviaModel> _ConcreteOrRandomChooser();
+typedef Future<NumberTrivia> _ConcreteOrRandomChooser();
 
 class NumberTriviaRepositoryImpl implements NumberTriviaRepository {
   final NumberTriviaRemoteDataSource remoteDataSource;
@@ -42,14 +41,14 @@ class NumberTriviaRepositoryImpl implements NumberTriviaRepository {
         localDataSource.cacheNumberTrivia(remoteTrivia);
         return Left(remoteTrivia);
       } on ServerException {
-        return Right(ServerFailure());
+        return Right(Failure.serverFailure());
       }
     } else {
       try {
         final localTrivia = await localDataSource.getLastNumberTrivia();
         return Left(localTrivia);
       } on CacheException {
-        return Right(CacheFailure());
+        return Right(Failure.cacheFailure());
       }
     }
   }

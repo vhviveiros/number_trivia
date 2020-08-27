@@ -6,12 +6,14 @@ import 'package:number_trivia/core/utils/input_converter.dart';
 main() {
   InputConverter inputConverter;
 
-  setUp((){
+  setUp(() {
     inputConverter = InputConverter();
   });
 
   group('stringTounsignedInt', () {
-    test("should return an integer when the string represents an unsigned integer", () async {
+    test(
+        "should return an integer when the string represents an unsigned integer",
+        () async {
       //arrange
       final str = "  123  ";
       //act
@@ -20,22 +22,24 @@ main() {
       expect(result, Left(123));
     });
 
-    test("should return failure when the string doesn't represent an integer", () async {
+    test("should return failure when the string doesn't represent an integer",
+        () async {
       //arrange
       final str = 'abc';
       //act
       final result = inputConverter.stringToUnsignedInteger(str);
       //assert
-      expect(result, Right(InvalidInputFailure()));
+      expect(result, Right(Failure.invalidInputFailure()));
     });
 
-    test("should return failure when the string is a negativa integer", () async {
+    test("should return failure when the string is a negativa integer",
+        () async {
       //arrange
       final str = '-123';
       //act
       final result = inputConverter.stringToUnsignedInteger(str);
       //assert
-      expect(result, Right(InvalidInputFailure()));
+      expect(result, Right(Failure.invalidInputFailure()));
     });
   });
 }

@@ -5,7 +5,7 @@ import 'package:http/http.dart';
 import 'package:mockito/mockito.dart';
 import 'package:number_trivia/core/error/exceptions.dart';
 import 'package:number_trivia/features/number_trivia/data/datasources/number_trivia_remote_data_source.dart';
-import 'package:number_trivia/features/number_trivia/data/models/number_trivia_model.dart';
+import 'package:number_trivia/features/number_trivia/domain/entities/number_trivia.dart';
 
 import '../../fixtures/fixture_reader.dart';
 
@@ -35,8 +35,7 @@ main() {
   group('get concrete number trivia', () {
     final tNumber = 1;
 
-    final tNumberTriviaModel =
-        NumberTriviaModel.fromJson(json.decode(jsonString));
+    final tNumberTrivia = NumberTrivia.fromJson(json.decode(jsonString));
 
     test(
         "should perform a GET on a URL with a number being the endpoint with json header",
@@ -59,7 +58,7 @@ main() {
       //act
       final result = await dataSource.getConcreteNumberTrivia(tNumber);
       //assert
-      expect(result, equals(tNumberTriviaModel));
+      expect(result, equals(tNumberTrivia));
     });
 
     test("should throw a ServerException when the response is different of 200",
@@ -83,8 +82,7 @@ main() {
   });
 
   group('get random number trivia', () {
-    final tNumberTriviaModel =
-        NumberTriviaModel.fromJson(json.decode(jsonString));
+    final tNumberTrivia = NumberTrivia.fromJson(json.decode(jsonString));
 
     test(
         "should perform a GET on a URL with a number being the endpoint with json header",
@@ -107,7 +105,7 @@ main() {
       //act
       final result = await dataSource.getRandomNumberTrivia();
       //assert
-      expect(result, equals(tNumberTriviaModel));
+      expect(result, equals(tNumberTrivia));
     });
 
     test("should throw a ServerException when the response is different of 200",

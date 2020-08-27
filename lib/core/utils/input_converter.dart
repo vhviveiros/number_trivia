@@ -8,7 +8,7 @@ class InputConverter {
       if (integer < 0) throw FormatException();
       return Left(integer);
     } on Exception {
-      return Right(InvalidInputFailure());
+      return Right(Failure.invalidInputFailure());
     }
   }
 }

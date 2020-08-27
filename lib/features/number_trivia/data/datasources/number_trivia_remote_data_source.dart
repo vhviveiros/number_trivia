@@ -2,12 +2,12 @@ import 'dart:convert';
 
 import 'package:http/http.dart';
 import 'package:number_trivia/core/error/exceptions.dart';
-import 'package:number_trivia/features/number_trivia/data/models/number_trivia_model.dart';
+import 'package:number_trivia/features/number_trivia/domain/entities/number_trivia.dart';
 
 abstract class NumberTriviaRemoteDataSource {
-  Future<NumberTriviaModel> getConcreteNumberTrivia(int number);
+  Future<NumberTrivia> getConcreteNumberTrivia(int number);
 
-  Future<NumberTriviaModel> getRandomNumberTrivia();
+  Future<NumberTrivia> getRandomNumberTrivia();
 }
 
 class NumberTriviaRemoteDataSourceImpl implements NumberTriviaRemoteDataSource {
@@ -16,14 +16,14 @@ class NumberTriviaRemoteDataSourceImpl implements NumberTriviaRemoteDataSource {
   NumberTriviaRemoteDataSourceImpl(this._httpClient);
 
   @override
-  Future<NumberTriviaModel> getConcreteNumberTrivia(int number) =>
+  Future<NumberTrivia> getConcreteNumberTrivia(int number) =>
       _getNumberTriviaFrom(number);
 
   @override
-  Future<NumberTriviaModel> getRandomNumberTrivia() =>
+  Future<NumberTrivia> getRandomNumberTrivia() =>
       _getNumberTriviaFrom('random');
 
-  Future<NumberTriviaModel> _getNumberTriviaFrom(dynamic typeSelector) async {
+  Future<NumberTrivia> _getNumberTriviaFrom(dynamic typeSelector) async {
     final response = await _httpClient.get(
       'http://numbersapi.com/$typeSelector',
       headers: {'Content-Type': 'application/json'},
@@ -31,6 +31,10 @@ class NumberTriviaRemoteDataSourceImpl implements NumberTriviaRemoteDataSource {
 
     if (response.statusCode != 200) throw ServerException();
 
-    return NumberTriviaModel.fromJson(json.decode(response.body));
+    final numberTrivia = NumberTrivia.fromJson(json.decode(response.body));
+
+    if (numberTrivia.number == null) throw ServerException();
+
+    return numberTrivia;
   }
 }

@@ -1,22 +1,12 @@
-part of 'number_trivia_cubit.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:meta/meta.dart';
+import 'package:number_trivia/features/number_trivia/domain/entities/number_trivia.dart';
+part 'number_trivia_state.freezed.dart';
 
-@immutable
-abstract class NumberTriviaState extends Equatable {
-  NumberTriviaState([List props]) : super(props);
-}
-
-class Empty extends NumberTriviaState {}
-
-class Loading extends NumberTriviaState {}
-
-class Loaded extends NumberTriviaState {
-  final NumberTrivia numberTrivia;
-
-  Loaded(this.numberTrivia) : super([numberTrivia]);
-}
-
-class Error extends NumberTriviaState {
-  final String message;
-
-  Error(this.message) : super([message]);
+@freezed
+abstract class NumberTriviaState with _$NumberTriviaState {
+  const factory NumberTriviaState.empty() = _Empty;
+  const factory NumberTriviaState.loading() = _Loading;
+  const factory NumberTriviaState.loaded(NumberTrivia numberTrivia) = _Loaded;
+  const factory NumberTriviaState.error(String message) = _Error;
 }

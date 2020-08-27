@@ -8,6 +8,7 @@ import 'package:number_trivia/features/number_trivia/domain/entities/number_triv
 import 'package:number_trivia/features/number_trivia/domain/usecases/get_concrete_number_trivia.dart';
 import 'package:number_trivia/features/number_trivia/domain/usecases/get_random_number_trivia.dart';
 import 'package:number_trivia/features/number_trivia/presentation/number_trivia/number_trivia_cubit.dart';
+import 'package:number_trivia/features/number_trivia/presentation/number_trivia/number_trivia_state.dart';
 
 class MockGetConcreteNumberTrivia extends Mock
     implements GetConcreteNumberTrivia {}
@@ -35,12 +36,12 @@ main() {
   });
 
   test('initial state should be empty',
-      () async => {expect(cubit.state, Empty())});
+      () async => {expect(cubit.state, NumberTriviaState.empty())});
 
   group('get trivia for concrete number', () {
     final tNumberString = '1';
     final tNumberParsed = int.parse(tNumberString);
-    final tNumberTrivia = NumberTrivia('test trivia', 1);
+    final tNumberTrivia = NumberTrivia(text: 'test trivia', number: 1);
 
     void setUpMockInputConverterSuccess() =>
         when(mockInputConverter.stringToUnsignedInteger(any))
@@ -64,11 +65,11 @@ main() {
       () async {
         // arrange
         when(mockInputConverter.stringToUnsignedInteger(any))
-            .thenReturn(Right(InvalidInputFailure()));
+            .thenReturn(Right(Failure.invalidInputFailure()));
         // assert later
         final expected = [
           // The initial state is always emitted first
-          Error(INVALID_INPUT_FAILURE_MESSAGE),
+          NumberTriviaState.error(Failure.invalidInputFailure().message),
         ];
         expectLater(cubit, emitsInOrder(expected));
         // act
@@ -97,8 +98,8 @@ main() {
 
       //assert later
       final expected = [
-        Loading(),
-        Loaded(tNumberTrivia),
+        NumberTriviaState.loading(),
+        NumberTriviaState.loaded(tNumberTrivia),
       ];
 
       expectLater(cubit, emitsInOrder(expected));
@@ -111,12 +112,12 @@ main() {
       //arrange
       setUpMockInputConverterSuccess();
       when(mockGetConcreteNumberTrivia(any))
-          .thenAnswer((_) async => Right(ServerFailure()));
+          .thenAnswer((_) async => Right(Failure.serverFailure()));
 
       //assert later
       final expected = [
-        Loading(),
-        Error(SERVER_FAILURE_MESSAGE),
+        NumberTriviaState.loading(),
+        NumberTriviaState.error(Failure.serverFailure().message),
       ];
 
       expectLater(cubit, emitsInOrder(expected));
@@ -130,12 +131,12 @@ main() {
       //arrange
       setUpMockInputConverterSuccess();
       when(mockGetConcreteNumberTrivia(any))
-          .thenAnswer((_) async => Right(CacheFailure()));
+          .thenAnswer((_) async => Right(Failure.cacheFailure()));
 
       //assert later
       final expected = [
-        Loading(),
-        Error(CACHE_FAILURE_MESSAGE),
+        NumberTriviaState.loading(),
+        NumberTriviaState.error(Failure.cacheFailure().message),
       ];
 
       expectLater(cubit, emitsInOrder(expected));
@@ -146,7 +147,7 @@ main() {
   });
 
   group('get trivia for random number', () {
-    final tNumberTrivia = NumberTrivia('test trivia', 1);
+    final tNumberTrivia = NumberTrivia(text: 'test trivia', number: 1);
 
     test("should get data from the random use case", () async {
       //arrange
@@ -167,8 +168,8 @@ main() {
 
       //assert later
       final expected = [
-        Loading(),
-        Loaded(tNumberTrivia),
+        NumberTriviaState.loading(),
+        NumberTriviaState.loaded(tNumberTrivia),
       ];
 
       expectLater(cubit, emitsInOrder(expected));
@@ -180,12 +181,12 @@ main() {
     test('should emit [Loading, Error] when getting data fails', () async {
       //arrange
       when(mockGetRandomNumberTrivia(any))
-          .thenAnswer((_) async => Right(ServerFailure()));
+          .thenAnswer((_) async => Right(Failure.serverFailure()));
 
       //assert later
       final expected = [
-        Loading(),
-        Error(SERVER_FAILURE_MESSAGE),
+        NumberTriviaState.loading(),
+        NumberTriviaState.error(Failure.serverFailure().message),
       ];
 
       expectLater(cubit, emitsInOrder(expected));
@@ -198,12 +199,12 @@ main() {
         () async {
       //arrange
       when(mockGetRandomNumberTrivia(any))
-          .thenAnswer((_) async => Right(CacheFailure()));
+          .thenAnswer((_) async => Right(Failure.cacheFailure()));
 
       //assert later
       final expected = [
-        Loading(),
-        Error(CACHE_FAILURE_MESSAGE),
+        NumberTriviaState.loading(),
+        NumberTriviaState.error(Failure.cacheFailure().message),
       ];
 
       expectLater(cubit, emitsInOrder(expected));

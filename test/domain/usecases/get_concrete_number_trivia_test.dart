@@ -19,7 +19,7 @@ void main() {
 
   test('should get the trivia for the number from repository', () async {
     final tNumber = 1;
-    final tNumberTrivia = NumberTrivia("Test", tNumber);
+    final tNumberTrivia = NumberTrivia(text: "Test", number: tNumber);
     //arrange
     when(mockNumberTriviaRepository.getConcreteNumberTrivia(any))
         .thenAnswer((_) async => Left(tNumberTrivia));

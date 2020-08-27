@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:number_trivia/core/utils/admanager.dart';
 import 'package:number_trivia/features/number_trivia/presentation/number_trivia/number_trivia_cubit.dart';
+import 'package:number_trivia/features/number_trivia/presentation/number_trivia/number_trivia_state.dart';
 import 'package:number_trivia/features/number_trivia/presentation/widgets/widgets.dart';
 import 'package:number_trivia/injector.dart';
 
@@ -72,19 +73,17 @@ class NumberTriviaPage extends StatelessWidget {
   // ignore: missing_return
   StatelessWidget _getTriviaDisplay(
       NumberTriviaState state, BuildContext context) {
-    if (state is Empty)
-      return TriviaDisplay(
+    return state.when(
+      empty: () => TriviaDisplay(
         message: "Start searching!",
-      );
-    else if (state is Loading)
-      return LoadingWidget();
-    else if (state is Loaded)
-      return TriviaDisplay(
-        message: state.numberTrivia.text,
-      );
-    else if (state is Error)
-      return TriviaDisplay(
-        message: state.message,
-      );
+      ),
+      loading: () => LoadingWidget(),
+      loaded: (numberTrivia) => TriviaDisplay(
+        message: numberTrivia.text,
+      ),
+      error: (error) => TriviaDisplay(
+        message: error,
+      ),
+    );
   }
 }

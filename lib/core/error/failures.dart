@@ -1,25 +1,16 @@
-import 'package:number_trivia/core/utils/equatable.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+part 'failures.freezed.dart';
 
-abstract class Failure extends Equatable {
-  final String message;
+const SERVER_FAILURE_MESSAGE = "Server Failure";
+const CACHE_FAILURE_MESSAGE = "Cache Failure";
+const INVALID_INPUT_FAILURE_MESSAGE =
+    "Invalid input - the number must be a positive integer";
 
-  static const String SERVER_FAILURE_MESSAGE = "Server Failure";
-  static const String CACHE_FAILURE_MESSAGE = "Cache Failure";
-  static const String INVALID_INPUT_FAILURE_MESSAGE =
-      "Invalid input - the number must be a positive integer";
-
-  Failure(this.message) : super([message]);
-}
-
-//General Failures
-class ServerFailure extends Failure {
-  ServerFailure() : super(Failure.SERVER_FAILURE_MESSAGE);
-}
-
-class CacheFailure extends Failure {
-  CacheFailure() : super(Failure.CACHE_FAILURE_MESSAGE);
-}
-
-class InvalidInputFailure extends Failure {
-  InvalidInputFailure() : super(Failure.INVALID_INPUT_FAILURE_MESSAGE);
+@freezed
+abstract class Failure with _$Failure {
+  const factory Failure(String message) = _Failure;
+  factory Failure.serverFailure() => Failure(SERVER_FAILURE_MESSAGE);
+  factory Failure.cacheFailure() => Failure(CACHE_FAILURE_MESSAGE);
+  factory Failure.invalidInputFailure() =>
+      Failure(INVALID_INPUT_FAILURE_MESSAGE);
 }
