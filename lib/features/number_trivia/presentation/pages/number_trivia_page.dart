@@ -44,15 +44,20 @@ class NumberTriviaPage extends StatelessWidget {
                         SizedBox(
                           height: 16,
                         ),
-                        BlocBuilder<NumberTriviaCubit, NumberTriviaState>(
-                          // ignore: missing_return
-                          builder: (context, state) =>
-                              _getTriviaDisplay(state, context),
+                        Opacity(
+                          opacity: 0.8,
+                          child: Column(children: [
+                            BlocBuilder<NumberTriviaCubit, NumberTriviaState>(
+                              // ignore: missing_return
+                              builder: (context, state) =>
+                                  _getTriviaDisplay(state, context),
+                            ),
+                            myTheme.spacingBox(),
+                            InputNumber(),
+                            myTheme.spacingBox(),
+                            TriviaControls(width: myTheme.width),
+                          ]),
                         ),
-                        myTheme.spacingBox(),
-                        InputNumber(),
-                        myTheme.spacingBox(),
-                        TriviaControls(width: myTheme.width),
                         SizedBox(height: 12),
                         DisplayAds(
                           admobBannerSize: AdmobBannerSize.LARGE_BANNER,

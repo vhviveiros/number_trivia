@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:number_trivia/features/number_trivia/presentation/controller/dispatch_controller.dart';
 
-class TriviaControls extends StatefulWidget {
+class TriviaControls extends StatelessWidget {
   const TriviaControls({
     Key key,
     @required double width,
@@ -11,23 +11,19 @@ class TriviaControls extends StatefulWidget {
   final double _width;
 
   @override
-  _TriviaControlsState createState() => _TriviaControlsState();
-}
-
-class _TriviaControlsState extends State<TriviaControls> {
-  @override
   Widget build(BuildContext context) {
     final controller = DispatchController.of(context);
+    final blackColor = Color.fromRGBO(54, 53, 53, 1);
 
     return SizedBox(
-      width: widget._width,
+      width: _width,
       child: Row(
         children: <Widget>[
           Container(
             width: 120,
             height: 50,
             child: RaisedButton(
-              color: Color.fromRGBO(54, 53, 53, 1),
+              color: blackColor,
               child: Text("Search".toUpperCase()),
               textTheme: ButtonTextTheme.primary,
               onPressed: () => controller.dispatchConcrete(
@@ -43,6 +39,10 @@ class _TriviaControlsState extends State<TriviaControls> {
               child: RaisedButton(
                 child: Text(
                   "Random Number".toUpperCase(),
+                  style: Theme.of(context)
+                      .textTheme
+                      .button
+                      .copyWith(color: blackColor),
                   textAlign: TextAlign.center,
                 ),
                 color: Colors.white,

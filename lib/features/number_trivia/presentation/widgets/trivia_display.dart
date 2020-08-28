@@ -20,9 +20,7 @@ class TriviaDisplay extends StatelessWidget {
           child: SelectableText(
             message,
             style: TextStyle(
-                fontSize: 25,
-                fontFamily: 'Roboto',
-                color: Color.fromRGBO(114, 114, 114, 1)),
+                fontSize: 25, color: Color.fromRGBO(114, 114, 114, 1)),
             textAlign: TextAlign.center,
           ),
         ),

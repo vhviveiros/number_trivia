@@ -5,11 +5,9 @@ class BackGround extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-
-    return Column(children: [
+    return Stack(children: [
       Container(
-        height: size.height * 0.4,
+        height: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.cover,
@@ -21,15 +19,15 @@ class BackGround extends StatelessWidget {
       ),
       Container(
         width: double.infinity,
-        height: size.height * 0.6,
+        height: double.infinity,
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Color.fromRGBO(236, 236, 236, 1),
-              Color.fromRGBO(118, 118, 118, 0.6),
+              Color.fromRGBO(109, 162, 255, 0.7),
+              Color.fromRGBO(255, 142, 142, 0.7),
             ],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
           ),
         ),
       ),
